@@ -23,7 +23,7 @@ import ProductView from "./views/ProductView.vue";
     <RouterView v-bind:route="HomeView"></RouterView>
     <RouterView v-bind:route="AboutView"></RouterView>
     <RouterView v-bind:route="ServiceView"></RouterView>
-    <RouterView v-bind:route="ProductView"></RouterView>
+    <!-- <RouterView v-bind:route="ProductView"></RouterView> -->
 
     <Footer />
   </main>

@@ -8,6 +8,8 @@ import { RouterView } from "vue-router";
 import Header from "./components/Header.vue";
 import Home from "./components/Home.vue";
 import Footer from "./components/Footer.vue";
+
+import About from "./views/AboutView.vue";
 </script>
 
 <template>
@@ -16,7 +18,9 @@ import Footer from "./components/Footer.vue";
   >
     <Header />
 
-    <Home />
+    <RouterView v-bind:route="HomeVue"></RouterView>
+
+    <!-- <Home /> -->
 
     <Footer />
   </main>

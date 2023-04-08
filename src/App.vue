@@ -8,8 +8,9 @@ import { RouterView } from "vue-router";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
-import About from "./views/AboutView.vue";
+import HomeView from "./views/HomeView.vue";
 import AboutView from "./views/AboutView.vue";
+import ServiceView from "./views/ServiceView.vue";
 </script>
 
 <template>
@@ -18,7 +19,7 @@ import AboutView from "./views/AboutView.vue";
   >
     <Header />
 
-    <RouterView v-bind:route="HomeVue"></RouterView>
+    <RouterView v-bind:route="HomeView"></RouterView>
     <RouterView v-bind:route="AboutView"></RouterView>
     <RouterView v-bind:route="ServiceView"></RouterView>
 

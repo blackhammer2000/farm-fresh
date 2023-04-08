@@ -1,10 +1,14 @@
+<script setup>
+import About from "../components/About.vue";
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <main>
+    <About />
+  </main>
 </template>
 
-<style>
+<!-- <style>
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
@@ -12,4 +16,4 @@
     align-items: center;
   }
 }
-</style>
+</style> -->

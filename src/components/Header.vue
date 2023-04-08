@@ -4,20 +4,6 @@ import { RouterLink } from "vue-router";
 
 <template>
   <header>
-    <!-- <div class="wrapper">
-        <h1>+0123456789</h1>
-      </div>
-  
-      <div class="wrapper">
-        <h1>FarmFresh</h1>
-      </div>
-  
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/students">Students</RouterLink>
-      </nav> -->
-
     <!-- Topbar Start -->
     <div class="container-fluid px-5 d-none d-lg-block">
       <div class="row gx-5 py-3 align-items-center">

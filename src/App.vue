@@ -11,6 +11,7 @@ import Footer from "./components/Footer.vue";
 import HomeView from "./views/HomeView.vue";
 import AboutView from "./views/AboutView.vue";
 import ServiceView from "./views/ServiceView.vue";
+import ProductView from "./views/ProductView.vue";
 </script>
 
 <template>
@@ -22,6 +23,7 @@ import ServiceView from "./views/ServiceView.vue";
     <RouterView v-bind:route="HomeView"></RouterView>
     <RouterView v-bind:route="AboutView"></RouterView>
     <RouterView v-bind:route="ServiceView"></RouterView>
+    <RouterView v-bind:route="ProductView"></RouterView>
 
     <Footer />
   </main>

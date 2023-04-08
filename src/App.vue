@@ -1,26 +1,29 @@
 <script setup>
 import "./assets/css/bootstrap.min.css";
-import "./assets/css/style.css"
-import "./assets/lib/owlcarousel/assets/owl.carousel.min.css"
+import "./assets/css/style.css";
+import "./assets/lib/owlcarousel/assets/owl.carousel.min.css";
 
- import { RouterView } from "vue-router";
+import { RouterView } from "vue-router";
 
- import Header from "./components/Header.vue";
- import Home from "./components/Home.vue";
-
+import Header from "./components/Header.vue";
+import Home from "./components/Home.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <main class="container-fluid d-flex flex-column align-iyems-center justify-content-start">
+  <main
+    class="container-fluid d-flex flex-column align-iyems-center justify-content-start"
+  >
     <Header />
 
     <Home />
+
+    <Footer />
   </main>
 </template>
 
-
-
-/* <!-- <style scoped>
+/*
+<!-- <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -82,4 +85,5 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style> --> */
+</style> -->
+*/

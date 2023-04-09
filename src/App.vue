@@ -20,10 +20,10 @@ import ProductView from "./views/ProductView.vue";
   >
     <Header />
 
-    <RouterView v-bind:route="HomeView"></RouterView>
-    <RouterView v-bind:route="AboutView"></RouterView>
-    <RouterView v-bind:route="ServiceView"></RouterView>
-    <!-- <RouterView v-bind:route="ProductView"></RouterView> -->
+    <RouterView @route="HomeView"></RouterView>
+    <RouterView @route="AboutView"></RouterView>
+    <RouterView @route="ServiceView"></RouterView>
+    <RouterView @route="ProductView"></RouterView>
 
     <Footer />
   </main>

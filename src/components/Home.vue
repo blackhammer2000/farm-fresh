@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img class="w-100" src="img/carousel-2.jpg" alt="Image" />
+          <img class="w-100" src="../assets/img/carousel-2.jpg" alt="Image" />
           <div
             class="carousel-caption top-0 bottom-0 start-0 end-0 d-flex flex-column align-items-center justify-content-center"
           >
@@ -111,7 +111,7 @@
           <div
             class="d-flex h-100 border border-5 border-primary border-bottom-0 pt-4"
           >
-            <img class="img-fluid mt-auto mx-auto" src="img/about.png" />
+            <img class="img-fluid mt-auto mx-auto" src="../assets/img/about.png" />
           </div>
         </div>
         <div class="col-lg-6 pb-5">
@@ -335,7 +335,7 @@
               ea. Clita est rebum amet dolore sit. Dolor stet dolor duo clita,
               vero dolor ipsum amet dolore magna lorem erat stet sed vero dolor
             </p>
-            <img class="img-fluid" src="img/feature.png" alt="" />
+            <img class="img-fluid" src="../assets/img/feature.png" alt="" />
           </div>
         </div>
         <div class="col-lg-3">
@@ -381,7 +381,7 @@
           <div
             class="product-item position-relative bg-white d-flex flex-column text-center"
           >
-            <img class="img-fluid mb-4" src="img/product-1.png" alt="" />
+            <img class="img-fluid mb-4" src="../assets/img/product-1.png" alt="" />
             <h6 class="mb-3">Organic Vegetable</h6>
             <h5 class="text-primary mb-0">$19.00</h5>
             <div class="btn-action d-flex justify-content-center">
@@ -398,7 +398,7 @@
           <div
             class="product-item position-relative bg-white d-flex flex-column text-center"
           >
-            <img class="img-fluid mb-4" src="img/product-2.png" alt="" />
+            <img class="img-fluid mb-4" src="../assets/img/product-2.png" alt="" />
             <h6 class="mb-3">Organic Vegetable</h6>
             <h5 class="text-primary mb-0">$19.00</h5>
             <div class="btn-action d-flex justify-content-center">
@@ -415,7 +415,7 @@
           <div
             class="product-item position-relative bg-white d-flex flex-column text-center"
           >
-            <img class="img-fluid mb-4" src="img/product-1.png" alt="" />
+            <img class="img-fluid mb-4" src="../assets/img/product-1.png" alt="" />
             <h6 class="mb-3">Organic Vegetable</h6>
             <h5 class="text-primary mb-0">$19.00</h5>
             <div class="btn-action d-flex justify-content-center">
@@ -432,7 +432,7 @@
           <div
             class="product-item position-relative bg-white d-flex flex-column text-center"
           >
-            <img class="img-fluid mb-4" src="img/product-2.png" alt="" />
+            <img class="img-fluid mb-4" src="../assets/img/product-2.png" alt="" />
             <h6 class="mb-3">Organic Vegetable</h6>
             <h5 class="text-primary mb-0">$19.00</h5>
             <div class="btn-action d-flex justify-content-center">
@@ -449,7 +449,7 @@
           <div
             class="product-item position-relative bg-white d-flex flex-column text-center"
           >
-            <img class="img-fluid mb-4" src="img/product-1.png" alt="" />
+            <img class="img-fluid mb-4" src="../assets/img/product-1.png" alt="" />
             <h6 class="mb-3">Organic Vegetable</h6>
             <h5 class="text-primary mb-0">$19.00</h5>
             <div class="btn-action d-flex justify-content-center">
@@ -476,7 +476,7 @@
             <div class="testimonial-item text-center text-white">
               <img
                 class="img-fluid mx-auto p-2 border border-5 border-secondary rounded-circle mb-4"
-                src="img/testimonial-2.jpg"
+                src="../assets/img/testimonial-2.jpg"
                 alt=""
               />
               <p class="fs-5">
@@ -490,7 +490,7 @@
             <div class="testimonial-item text-center text-white">
               <img
                 class="img-fluid mx-auto p-2 border border-5 border-secondary rounded-circle mb-4"
-                src="img/testimonial-2.jpg"
+                src="../assets/img/testimonial-2.jpg"
                 alt=""
               />
               <p class="fs-5">
@@ -520,7 +520,7 @@
           <div class="row g-0">
             <div class="col-10">
               <div class="position-relative">
-                <img class="img-fluid w-100" src="img/team-1.jpg" alt="" />
+                <img class="img-fluid w-100" src="../assets/img/team-1.jpg" alt="" />
                 <div
                   class="position-absolute start-0 bottom-0 w-100 py-3 px-4"
                   style="background: rgba(52, 173, 84, 0.85)"
@@ -554,7 +554,7 @@
           <div class="row g-0">
             <div class="col-10">
               <div class="position-relative">
-                <img class="img-fluid w-100" src="img/team-2.jpg" alt="" />
+                <img class="img-fluid w-100" src="../assets/img/team-2.jpg" alt="" />
                 <div
                   class="position-absolute start-0 bottom-0 w-100 py-3 px-4"
                   style="background: rgba(52, 173, 84, 0.85)"
@@ -588,7 +588,7 @@
           <div class="row g-0">
             <div class="col-10">
               <div class="position-relative">
-                <img class="img-fluid w-100" src="img/team-3.jpg" alt="" />
+                <img class="img-fluid w-100" src="../assets/img/team-3.jpg" alt="" />
                 <div
                   class="position-absolute start-0 bottom-0 w-100 py-3 px-4"
                   style="background: rgba(52, 173, 84, 0.85)"
@@ -633,7 +633,7 @@
       <div class="row g-5">
         <div class="col-lg-4">
           <div class="blog-item position-relative overflow-hidden">
-            <img class="img-fluid" src="img/blog-1.jpg" alt="" />
+            <img class="img-fluid" src="../assets/img/blog-1.jpg" alt="" />
             <a class="blog-overlay" href="">
               <h4 class="text-white">
                 Lorem elitr magna stet eirmod labore amet
@@ -644,7 +644,7 @@
         </div>
         <div class="col-lg-4">
           <div class="blog-item position-relative overflow-hidden">
-            <img class="img-fluid" src="img/blog-2.jpg" alt="" />
+            <img class="img-fluid" src="../assets/img/blog-2.jpg" alt="" />
             <a class="blog-overlay" href="">
               <h4 class="text-white">
                 Lorem elitr magna stet eirmod labore amet

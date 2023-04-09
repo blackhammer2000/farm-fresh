@@ -3,7 +3,7 @@ import "./assets/css/bootstrap.min.css";
 import "./assets/css/style.css";
 import "./assets/lib/owlcarousel/assets/owl.carousel.min.css";
 
-import { RouterView, Router } from "vue-router";
+import { RouterView } from "vue-router";
 
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";

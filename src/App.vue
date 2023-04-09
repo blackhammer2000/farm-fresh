@@ -3,7 +3,7 @@ import "./assets/css/bootstrap.min.css";
 import "./assets/css/style.css";
 import "./assets/lib/owlcarousel/assets/owl.carousel.min.css";
 
-import { RouterView, Router, RouterMatcher } from "vue-router";
+import { RouterView, Router } from "vue-router";
 
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
@@ -20,12 +20,10 @@ import ProductView from "./views/ProductView.vue";
   >
     <Header />
 
-    <Router>
-      <RouterMatcher @route="HomeView"></RouterMatcher>
-      <RouterMatcher @route="AboutView"></RouterMatcher>
-      <RouterMatcher @route="ServiceView"></RouterMatcher>
-      <RouterMatcher @route="ProductView"></RouterMatcher>
-    </Router>
+    <RouterView @route="HomeView"></RouterView>
+    <RouterView @route="AboutView"></RouterView>
+    <RouterView @route="ServiceView"></RouterView>
+    <RouterView @route="ProductView"></RouterView>
 
     <Footer />
   </main>

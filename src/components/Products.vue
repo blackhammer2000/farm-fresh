@@ -1,24 +1,22 @@
 <script>
 import { useProductsStore } from "../stores/products";
 import Productcard from "../components/Productcard.vue";
+import { RouterLink } from "vue-router";
 
 export default {
   setup() {
     let productsStore = useProductsStore();
     return productsStore.products;
   },
-
   data() {
     return {
       products: useProductsStore().products,
     };
   },
-
   methods: {
     deleteProduct(id) {
       this.products = this.products.filter((product) => product.id !== id);
     },
-
     updateProduct(newProduct) {
       this.products = this.products.map((product) => {
         if (product.id === newProduct.id) return newProduct;
@@ -26,6 +24,7 @@ export default {
       });
     },
   },
+  components: { RouterLink },
 };
 </script>
 
@@ -71,14 +70,14 @@ export default {
               >
                 <i class="bi bi-cart text-white"> Delete</i>
               </button>
-              <button class="btn bg-secondary py-2 px-3">
+              <RouterLink to="/edit/product" class="btn bg-secondary py-2 px-3">
                 <i class="bi bi-eye text-white">Edit</i>
-              </button>
+              </RouterLink>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="owl-carousel product-carousel px-5"></div> -->
+      <div class="owl-carousel product-carousel px-5"></div>
     </div>
   </div>
   <!-- Products End -->

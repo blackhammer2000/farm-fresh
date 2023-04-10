@@ -4,6 +4,7 @@ import HomeView from "../views/HomeView.vue";
 import ServiceView from "../views/ServiceView.vue";
 import ProductView from "../views/ProductView.vue";
 import ContactView from "../views/ContactView.vue";
+import AddProductView from "../views/AddProductView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +41,11 @@ const router = createRouter({
       path: "/contact",
       name: "contact",
       component: ContactView,
+    },
+    {
+      path: "/add/product",
+      name: "add product",
+      component: AddProductView,
     },
   ],
 });

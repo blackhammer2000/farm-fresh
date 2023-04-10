@@ -11,19 +11,21 @@ export default {
     return {
       products: useProductsStore().products,
       productToEdit: useProductsStore().productToEdit,
-      newProduct: {},
+      name: "",
+      price: "",
+      stock: "",
     };
   },
   methods: {
     setProp(prop, e) {
-      this.newProduct[prop] = e.target.value;
+      this[prop] = e.target.value;
     },
 
     addProduct(e, newProduct) {
       e.preventDefault();
 
       if (!newProduct) return;
-      newProduct.id = newProduct.length - 1;
+      newProduct.id = parseInt(newProduct.length - 1);
 
       this.products.push(newProduct);
 
@@ -94,7 +96,7 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          :onClick="(e) => addProduct(e, newProduct)"
+          :onClick="(e) => addProduct(e, { name, price, stock })"
           type="submit"
           class="btn btn-primary w-100"
         >
@@ -103,7 +105,7 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          :onClick="(e) => updateProduct(e, newProduct)"
+          :onClick="(e) => updateProduct(e, { name, price, stock })"
           :disabled="!productToEdit"
           type="submit"
           class="btn btn-primary w-100"

@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div class="pb-5" v-for="product in products">
+  <!-- <div class="pb-5" v-for="product in products">
     <div
       class="product-item position-relative bg-white d-flex flex-column text-center"
     >
@@ -32,7 +32,7 @@ export default {
         ></a>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- Hero Start -->
   <div class="container-fluid bg-primary py-5 bg-hero mb-5">
     <div class="container py-5">
@@ -55,7 +55,7 @@ export default {
         <h1 class="display-5">Our Fresh & Organic Products</h1>
       </div>
       <div class="owl-carousel product-carousel px-5">
-        <div class="pb-5" v-for="product in products">
+        <!-- <div class="pb-5" v-for="product in products">
           <div
             class="product-item position-relative bg-white d-flex flex-column text-center"
           >
@@ -75,92 +75,112 @@ export default {
               ></a>
             </div>
           </div>
-        </div>
-        <!-- <div class="pb-5">
-          <div
-            class="product-item position-relative bg-white d-flex flex-column text-center"
-          >
-            <img class="img-fluid mb-4" src="img/product-1.png" alt="" />
-            <h6 class="mb-3">Organic Vegetable</h6>
-            <h5 class="text-primary mb-0">$19.00</h5>
-            <div class="btn-action d-flex justify-content-center">
-              <a class="btn bg-primary py-2 px-3" href=""
-                ><i class="bi bi-cart text-white"></i
-              ></a>
-              <a class="btn bg-secondary py-2 px-3" href=""
-                ><i class="bi bi-eye text-white"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="pb-5">
-          <div
-            class="product-item position-relative bg-white d-flex flex-column text-center"
-          >
-            <img class="img-fluid mb-4" src="img/product-2.png" alt="" />
-            <h6 class="mb-3">Organic Vegetable</h6>
-            <h5 class="text-primary mb-0">$19.00</h5>
-            <div class="btn-action d-flex justify-content-center">
-              <a class="btn bg-primary py-2 px-3" href=""
-                ><i class="bi bi-cart text-white"></i
-              ></a>
-              <a class="btn bg-secondary py-2 px-3" href=""
-                ><i class="bi bi-eye text-white"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="pb-5">
-          <div
-            class="product-item position-relative bg-white d-flex flex-column text-center"
-          >
-            <img class="img-fluid mb-4" src="img/product-1.png" alt="" />
-            <h6 class="mb-3">Organic Vegetable</h6>
-            <h5 class="text-primary mb-0">$19.00</h5>
-            <div class="btn-action d-flex justify-content-center">
-              <a class="btn bg-primary py-2 px-3" href=""
-                ><i class="bi bi-cart text-white"></i
-              ></a>
-              <a class="btn bg-secondary py-2 px-3" href=""
-                ><i class="bi bi-eye text-white"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="pb-5">
-          <div
-            class="product-item position-relative bg-white d-flex flex-column text-center"
-          >
-            <img class="img-fluid mb-4" src="img/product-2.png" alt="" />
-            <h6 class="mb-3">Organic Vegetable</h6>
-            <h5 class="text-primary mb-0">$19.00</h5>
-            <div class="btn-action d-flex justify-content-center">
-              <a class="btn bg-primary py-2 px-3" href=""
-                ><i class="bi bi-cart text-white"></i
-              ></a>
-              <a class="btn bg-secondary py-2 px-3" href=""
-                ><i class="bi bi-eye text-white"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="pb-5">
-          <div
-            class="product-item position-relative bg-white d-flex flex-column text-center"
-          >
-            <img class="img-fluid mb-4" src="img/product-1.png" alt="" />
-            <h6 class="mb-3">Organic Vegetable</h6>
-            <h5 class="text-primary mb-0">$19.00</h5>
-            <div class="btn-action d-flex justify-content-center">
-              <a class="btn bg-primary py-2 px-3" href=""
-                ><i class="bi bi-cart text-white"></i
-              ></a>
-              <a class="btn bg-secondary py-2 px-3" href=""
-                ><i class="bi bi-eye text-white"></i
-              ></a>
-            </div>
-          </div>
         </div> -->
+        <div class="pb-5">
+          <div
+            class="product-item position-relative bg-white d-flex flex-column text-center"
+          >
+            <img
+              class="img-fluid mb-4"
+              src="../assets/img/product-1.png"
+              alt=""
+            />
+            <h6 class="mb-3">Organic Vegetable</h6>
+            <h5 class="text-primary mb-0">$19.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn bg-primary py-2 px-3" href=""
+                ><i class="bi bi-cart text-white"></i
+              ></a>
+              <a class="btn bg-secondary py-2 px-3" href=""
+                ><i class="bi bi-eye text-white"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="pb-5">
+          <div
+            class="product-item position-relative bg-white d-flex flex-column text-center"
+          >
+            <img
+              class="img-fluid mb-4"
+              src="../assets/img/product-2.png"
+              alt=""
+            />
+            <h6 class="mb-3">Organic Vegetable</h6>
+            <h5 class="text-primary mb-0">$19.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn bg-primary py-2 px-3" href=""
+                ><i class="bi bi-cart text-white"></i
+              ></a>
+              <a class="btn bg-secondary py-2 px-3" href=""
+                ><i class="bi bi-eye text-white"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="pb-5">
+          <div
+            class="product-item position-relative bg-white d-flex flex-column text-center"
+          >
+            <img
+              class="img-fluid mb-4"
+              src="../assets/img/product-1.png"
+              alt=""
+            />
+            <h6 class="mb-3">Organic Vegetable</h6>
+            <h5 class="text-primary mb-0">$19.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn bg-primary py-2 px-3" href=""
+                ><i class="bi bi-cart text-white"></i
+              ></a>
+              <a class="btn bg-secondary py-2 px-3" href=""
+                ><i class="bi bi-eye text-white"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="pb-5">
+          <div
+            class="product-item position-relative bg-white d-flex flex-column text-center"
+          >
+            <img
+              class="img-fluid mb-4"
+              src="../assets/img/product-2.png"
+              alt=""
+            />
+            <h6 class="mb-3">Organic Vegetable</h6>
+            <h5 class="text-primary mb-0">$19.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn bg-primary py-2 px-3" href=""
+                ><i class="bi bi-cart text-white"></i
+              ></a>
+              <a class="btn bg-secondary py-2 px-3" href=""
+                ><i class="bi bi-eye text-white"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="pb-5">
+          <div
+            class="product-item position-relative bg-white d-flex flex-column text-center"
+          >
+            <img
+              class="img-fluid mb-4"
+              src="../assets/img/product-1.png"
+              alt=""
+            />
+            <h6 class="mb-3">Organic Vegetable</h6>
+            <h5 class="text-primary mb-0">$19.00</h5>
+            <div class="btn-action d-flex justify-content-center">
+              <a class="btn bg-primary py-2 px-3" href=""
+                ><i class="bi bi-cart text-white"></i
+              ></a>
+              <a class="btn bg-secondary py-2 px-3" href=""
+                ><i class="bi bi-eye text-white"></i
+              ></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

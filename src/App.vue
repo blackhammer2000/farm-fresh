@@ -2,6 +2,17 @@
 import "./assets/css/bootstrap.min.css";
 import "./assets/css/style.css";
 import "./assets/lib/owlcarousel/assets/owl.carousel.min.css";
+import "./assets/lib/counterup/counterup.min.js";
+import "lib/waypoints/waypoints.min.js";
+import "lib/easing/easing.min.js";
+
+// {/* <script src="lib/easing/easing.min.js"></script>
+//     <script src="lib/waypoints/waypoints.min.js"></script>
+//     <script src="lib/counterup/counterup.min.js"></script>
+//     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+//     <!-- Template Javascript -->
+//     <script src="js/main.js"></script> */}
 
 import { RouterView } from "vue-router";
 

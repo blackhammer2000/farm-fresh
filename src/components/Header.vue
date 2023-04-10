@@ -74,7 +74,7 @@ import { RouterLink } from "vue-router";
 
           <!-- <a href="product.html" class="nav-item nav-link">Product</a> -->
           <RouterLink class="nav-item nav-link" to="/products"
-            >Product</RouterLink
+            >Products</RouterLink
           >
 
           <RouterLink class="nav-item nav-link" to="/modify/product"

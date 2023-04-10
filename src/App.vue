@@ -26,6 +26,7 @@ import HomeView from "./views/HomeView.vue";
     <Header />
 
     <RouterView @route="HomeView"></RouterView>
+
     <!-- <RouterView @route="AboutView"></RouterView>
     <RouterView @route="ServiceView"></RouterView>
     <RouterView @route="ProductView"></RouterView> -->

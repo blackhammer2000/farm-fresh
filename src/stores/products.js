@@ -12,7 +12,7 @@ export const useProductsStore = defineStore("PRODUCTS", {
         { id: 6, name: "Millet", price: 230, stock: 450 },
         { id: 7, name: "Wheat", price: 120, stock: 120 },
         { id: 8, name: "Potatoes", price: 100, stock: 110 },
-        { id: 9, name: "Tomatoes", price: 110, stock: 245 },
+        { id: 9, name: "Tomatoes", price: 110, stock: 170 },
         { id: 10, name: "Onions", price: 170, stock: 340 },
       ],
 

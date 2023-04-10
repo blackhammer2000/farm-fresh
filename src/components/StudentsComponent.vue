@@ -5,5 +5,6 @@
 </template>
 
 <script setup>
-let studentsStore = useStudentStore();
+import { useProductsStore } from "../stores/products";
+let productsStore = useProductsStore();
 </script>

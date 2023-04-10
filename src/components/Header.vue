@@ -61,18 +61,14 @@ import { RouterLink } from "vue-router";
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav mx-auto py-0">
-          <!-- <a href="index.html" class="nav-item nav-link active">Home</a> -->
           <RouterLink class="nav-item nav-link active" to="/">Home</RouterLink>
 
-          <!-- <a href="about.html" class="nav-item nav-link">About</a> -->
           <RouterLink class="nav-item nav-link" to="/about">About</RouterLink>
 
-          <!-- <a href="service.html" class="nav-item nav-link">Service</a> -->
           <RouterLink class="nav-item nav-link" to="/services"
             >Services</RouterLink
           >
 
-          <!-- <a href="product.html" class="nav-item nav-link">Product</a> -->
           <RouterLink class="nav-item nav-link" to="/products"
             >Products</RouterLink
           >
@@ -81,20 +77,32 @@ import { RouterLink } from "vue-router";
             >Modify Product</RouterLink
           >
 
-          <RouterLink class="nav-item nav-link" to="/pages">Pages</RouterLink>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Pages</a
+            >
+            <div class="dropdown-menu m-0">
+              <RouterLink class="nav-item nav-link" to="/pages"
+                >Blog Grid</RouterLink
+              >
+              <RouterLink class="nav-item nav-link" to="/pages"
+                >Blog Details</RouterLink
+              >
+              <RouterLink class="nav-item nav-link" to="/pages"
+                >Features</RouterLink
+              >
+              <RouterLink class="nav-item nav-link" to="/pages"
+                >The Team</RouterLink
+              >
+              <RouterLink class="nav-item nav-link" to="/pages"
+                >Testimonial</RouterLink
+              >
+            </div>
+          </div>
 
-          <!-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">The Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    </div>
-                </div> -->
-
-          <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
           <RouterLink class="nav-item nav-link" to="/contact"
             >Contact</RouterLink
           >

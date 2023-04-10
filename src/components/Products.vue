@@ -1,6 +1,5 @@
 <script>
 import { useProductsStore } from "../stores/products";
-import Productcard from "../components/Productcard.vue";
 import { RouterLink } from "vue-router";
 
 export default {
@@ -70,7 +69,7 @@ export default {
               >
                 <i class="bi bi-cart text-white"> Delete</i>
               </button>
-              <RouterLink to="/edit/product" class="btn bg-secondary py-2 px-3">
+              <RouterLink to="/add/product" class="btn bg-secondary py-2 px-3">
                 <i class="bi bi-eye text-white">Edit</i>
               </RouterLink>
             </div>

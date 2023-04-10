@@ -40,7 +40,8 @@ export default {
       }
 
       this.products = this.products.map((product) => {
-        if (product.id === newProduct.id) {
+        if (product.id === this.productToEdit.id) {
+          newProduct.id = product.id;
           return newProduct;
         }
         return product;

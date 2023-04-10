@@ -21,9 +21,9 @@ import ProductView from "./views/ProductView.vue";
     <Header />
 
     <RouterView @route="HomeView"></RouterView>
-    <RouterView @route="AboutView"></RouterView>
+    <!-- <RouterView @route="AboutView"></RouterView>
     <RouterView @route="ServiceView"></RouterView>
-    <RouterView @route="ProductView"></RouterView>
+    <RouterView @route="ProductView"></RouterView> -->
 
     <Footer />
   </main>

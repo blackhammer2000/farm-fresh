@@ -22,6 +22,11 @@ export default {
     updateProduct(e, newProduct) {
       e.preventDefault();
 
+      if (!newProduct) {
+        alert("Invalid product");
+        return;
+      }
+
       this.products = this.products.map((product) => {
         if (product.id === newProduct.id) return newProduct;
         return product;
@@ -93,18 +98,18 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          @disabled="() => Object.keys(productToEdit)"
+          :disabled="productToEdit !== {}"
           type="submit"
-          class="btn btn-success w-100"
+          class="btn btn-primary w-100"
         >
           Add Product
         </button>
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          @disabled="() => !Object.keys(productToEdit)"
+          :disabled="productToEdit === {}"
           type="submit"
-          class="btn btn-info w-100"
+          class="btn btn-primary w-100"
         >
           Update Product
         </button>

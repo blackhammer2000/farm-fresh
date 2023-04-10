@@ -7,14 +7,6 @@ import "lib/waypoints/waypoints.min.js";
 import "lib/easing/easing.min.js";
 import "./assets/js/main.js";
 
-// {/* <script src="lib/easing/easing.min.js"></script>
-//     <script src="lib/waypoints/waypoints.min.js"></script>
-//     <script src="lib/counterup/counterup.min.js"></script>
-//     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-//     <!-- Template Javascript -->
-//     <script src="js/main.js"></script> */}
-
 import { RouterView } from "vue-router";
 
 import Header from "./components/Header.vue";

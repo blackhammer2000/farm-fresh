@@ -27,6 +27,8 @@ export default {
 </script>
 
 <template>
+  {{ productToEdit }}
+
   <fieldset
     class="container-fluid d-flex flex-column justify-content-center align-items-center"
     style="height: 300px"
@@ -44,7 +46,13 @@ export default {
     >
       <div class="form-group">
         <input
-          @change="(e) => (newProduct.name = e.target.value)"
+          @change="
+            (e) =>
+              Object.keys(productToEdit)
+                ? (newProduct.name = e.target.value)
+                : null
+          "
+          value="() => {{productToEdit.name}}"
           type="text"
           class="form-control"
           placeholder="Enter Product Name"
@@ -52,7 +60,13 @@ export default {
       </div>
       <div class="form-group mt-2">
         <input
-          @change="(e) => (newProduct.name = e.target.value)"
+          @change="
+            (e) =>
+              Object.keys(productToEdit)
+                ? (newProduct.price = e.target.value)
+                : null
+          "
+          value="() => {{productToEdit.price}}"
           type="number"
           class="form-control"
           placeholder="Enter Product Price"
@@ -60,17 +74,33 @@ export default {
       </div>
       <div class="form-group mt-2">
         <input
-          @change="(e) => (newProduct.name = e.target.value)"
+          @change="
+            (e) =>
+              Object.keys(productToEdit)
+                ? (newProduct.stock = e.target.value)
+                : null
+          "
+          value="() => {{productToEdit.stock}}"
           type="number"
           class="form-control"
           placeholder="Enter Amount In Stock"
         />
       </div>
       <div class="form-group mt-2 text-center w-100">
-        <button type="submit" class="btn btn-success w-100">Add Product</button>
+        <button
+          @disabled="() => productToEdit.hasOwnProperty"
+          type="submit"
+          class="btn btn-success w-100"
+        >
+          Add Product
+        </button>
       </div>
       <div class="form-group mt-2 text-center w-100">
-        <button type="submit" class="btn btn-success w-100">
+        <button
+          @disabled="() => !productToEdit.hasOwnProperty"
+          type="submit"
+          class="btn btn-info w-100"
+        >
           Update Product
         </button>
       </div>

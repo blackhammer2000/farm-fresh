@@ -54,7 +54,9 @@ export default {
     class="container-fluid d-flex flex-column justify-content-center align-items-center"
     style="height: 300px"
   >
-    <legend class="container-fluid text-center">ADD PRODUCT</legend>
+    <legend class="container-fluid text-center">
+      {{ productToEdit ? "UPDATE PRODUCT" : "ADD PRODUCT" }}
+    </legend>
     <form action="" class="form container">
       <div class="form-group">
         <input

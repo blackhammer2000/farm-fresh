@@ -77,8 +77,8 @@ import { RouterLink } from "vue-router";
             >Product</RouterLink
           >
 
-          <RouterLink class="nav-item nav-link" to="/add/product"
-            >Add Product</RouterLink
+          <RouterLink class="nav-item nav-link" to="/modify/product"
+            >Modify Product</RouterLink
           >
 
           <RouterLink class="nav-item nav-link" to="/pages">Pages</RouterLink>

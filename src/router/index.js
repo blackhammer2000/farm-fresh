@@ -43,8 +43,8 @@ const router = createRouter({
       component: ContactView,
     },
     {
-      path: "/add/product",
-      name: "add product",
+      path: "/modify/product",
+      name: "modify product",
       component: AddProductView,
     },
   ],

@@ -15,8 +15,8 @@ export default {
   },
 
   methods: {
-    deleteProduct(e, id) {
-      e.preventDefault();
+    deleteProduct(id) {
+      console.log(id);
 
       this.state.products = this.state.products.filter(
         (product) => product.id !== id

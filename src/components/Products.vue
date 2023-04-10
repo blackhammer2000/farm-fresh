@@ -24,6 +24,12 @@ export default {
         (product) => product.id === productToEdit.id
       );
     },
+
+    mouseOverEffects(e) {
+      e.target.style.transtion = "ease .4s";
+      e.target.style.scale = 1.1;
+      e.target.style.borderWidth = "2em";
+    },
   },
   components: { RouterLink },
 };
@@ -53,7 +59,11 @@ export default {
       </div>
 
       <div class="d-flex flex-wrap justify-content-between align-items-start">
-        <div class="pb-5" v-for="product in products">
+        <div
+          class="pb-5 border my-2"
+          :on-mouseover="(e) => mouseOverEffects(e)"
+          v-for="product in products"
+        >
           <div
             class="product-item position-relative bg-white d-flex flex-column text-center"
           >

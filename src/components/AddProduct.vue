@@ -11,6 +11,7 @@ export default {
     return {
       products: useProductsStore().products,
       productToEdit: useProductsStore().productToEdit,
+      newProduct: {},
     };
   },
   methods: {
@@ -37,12 +38,13 @@ export default {
       @submit="
         () => {
           e.preventDefault();
-          updateProduct(productToEdit);
+          updateProduct(newProduct);
         }
       "
     >
       <div class="form-group">
         <input
+          @change="(e) => (newProduct.name = e.target.value)"
           type="text"
           class="form-control"
           placeholder="Enter Product Name"
@@ -50,6 +52,7 @@ export default {
       </div>
       <div class="form-group mt-2">
         <input
+          @change="(e) => (newProduct.name = e.target.value)"
           type="number"
           class="form-control"
           placeholder="Enter Product Price"
@@ -57,6 +60,7 @@ export default {
       </div>
       <div class="form-group mt-2">
         <input
+          @change="(e) => (newProduct.name = e.target.value)"
           type="number"
           class="form-control"
           placeholder="Enter Amount In Stock"
@@ -64,6 +68,11 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button type="submit" class="btn btn-success w-100">Add Product</button>
+      </div>
+      <div class="form-group mt-2 text-center w-100">
+        <button type="submit" class="btn btn-success w-100">
+          Update Product
+        </button>
       </div>
     </form>
   </fieldset>

@@ -65,14 +65,14 @@ export default {
             <div class="btn-action d-flex justify-content-center">
               <button
                 @click="() => deleteProduct(product.id)"
-                class="btn bg-primary py-2 px-3"
+                class="btn bg-danger py-2 px-3"
               >
                 <i class="bi bi-cart text-white"> Delete</i>
               </button>
               <RouterLink
                 @click="() => updateProductToEdit(product)"
                 to="/add/product"
-                class="btn bg-secondary py-2 px-3"
+                class="btn bg-info py-2 px-3"
               >
                 <i class="bi bi-eye text-white">Edit</i>
               </RouterLink>

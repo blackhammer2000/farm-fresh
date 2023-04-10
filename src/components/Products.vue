@@ -16,15 +16,11 @@ export default {
 
   methods: {
     deleteProduct(id) {
-      console.log(id);
-
-      this.state.products = this.state.products.filter(
-        (product) => product.id !== id
-      );
+      this.products = this.products.filter((product) => product.id !== id);
     },
 
     updateProduct(newProduct) {
-      this.state.products = this.state.products.map((product) => {
+      this.products = this.products.map((product) => {
         if (product.id === newProduct.id) return newProduct;
         return product;
       });

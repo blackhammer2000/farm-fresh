@@ -15,8 +15,16 @@ export default {
     };
   },
   methods: {
-    setProp(prop, value) {
-      this.newProduct[prop] = value;
+    setProp(prop, e) {
+      this.newProduct[prop] = e.target.value;
+    },
+
+    addProduct(e, newProduct) {
+      e.preventDefault();
+
+      if (!newProduct) return;
+
+      this.products.push(newProduct);
     },
 
     updateProduct(e, newProduct) {
@@ -31,6 +39,8 @@ export default {
         if (product.id === newProduct.id) return newProduct;
         return product;
       });
+
+      this.newProduct = {};
     },
   },
   components: { RouterLink },
@@ -45,24 +55,11 @@ export default {
     style="height: 300px"
   >
     <legend class="container-fluid text-center">ADD PRODUCT</legend>
-    <form
-      action=""
-      class="form container"
-      @submit="
-        (e) => {
-          updateProduct(e, newProduct);
-        }
-      "
-    >
+    <form action="" class="form container">
       <div class="form-group">
         <input
-          @change="
-            (e) =>
-              Object.keys(productToEdit)
-                ? (newProduct.name = e.target.value)
-                : null
-          "
-          v-bind:value="Object.keys(productToEdit) ? productToEdit.name : ''"
+          :onChange="(e) => setProp(name, e)"
+          :value="productToEdit ? productToEdit.name : ''"
           type="text"
           class="form-control"
           placeholder="Enter Product Name"
@@ -70,13 +67,8 @@ export default {
       </div>
       <div class="form-group mt-2">
         <input
-          @change="
-            (e) =>
-              Object.keys(productToEdit)
-                ? (newProduct.price = e.target.value)
-                : null
-          "
-          v-bind:value="Object.keys(productToEdit) ? productToEdit.price : ''"
+          :onChange="(e) => setProp(price, e)"
+          :value="productToEdit ? productToEdit.price : ''"
           type="number"
           class="form-control"
           placeholder="Enter Product Price"
@@ -84,13 +76,8 @@ export default {
       </div>
       <div class="form-group mt-2">
         <input
-          @change="
-            (e) =>
-              Object.keys(productToEdit)
-                ? (newProduct.stock = e.target.value)
-                : null
-          "
-          v-bind:value="Object.keys(productToEdit) ? productToEdit.stock : ''"
+          :onChange="(e) => setProp(stock, e)"
+          :value="productToEdit ? productToEdit.stock : ''"
           type="number"
           class="form-control"
           placeholder="Enter Amount In Stock"
@@ -98,7 +85,8 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          :disabled="productToEdit !== {}"
+          :onClick="(e) => addProduct(e, newProduct)"
+          :disabled="productToEdit"
           type="submit"
           class="btn btn-primary w-100"
         >
@@ -107,7 +95,8 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          :disabled="productToEdit === {}"
+          :onClick="(e) => updateProduct(e, newProduct)"
+          :disabled="!productToEdit"
           type="submit"
           class="btn btn-primary w-100"
         >

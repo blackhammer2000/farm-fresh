@@ -31,7 +31,16 @@ export default {
     style="height: 300px"
   >
     <legend class="container-fluid text-center">ADD PRODUCT</legend>
-    <form action="" class="form container">
+    <form
+      action=""
+      class="form container"
+      @submit="
+        () => {
+          e.preventDefault();
+          updateProduct(productToEdit);
+        }
+      "
+    >
       <div class="form-group">
         <input
           type="text"

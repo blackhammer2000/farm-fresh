@@ -3,8 +3,8 @@ import "./assets/css/bootstrap.min.css";
 import "./assets/css/style.css";
 import "./assets/lib/owlcarousel/assets/owl.carousel.min.css";
 import "./assets/lib/counterup/counterup.min.js";
-import "lib/waypoints/waypoints.min.js";
-import "lib/easing/easing.min.js";
+import "./assets/lib/waypoints/waypoints.min.js";
+import "./assets/lib/easing/easing.min.js";
 import "./assets/js/main.js";
 
 import { RouterView } from "vue-router";

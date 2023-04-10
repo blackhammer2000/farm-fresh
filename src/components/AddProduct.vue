@@ -23,6 +23,7 @@ export default {
       e.preventDefault();
 
       if (!newProduct) return;
+      newProduct.id = newProduct.length - 1;
 
       this.products.push(newProduct);
 
@@ -39,7 +40,9 @@ export default {
       }
 
       this.products = this.products.map((product) => {
-        if (product.id === newProduct.id) return newProduct;
+        if (product.id === newProduct.id) {
+          return newProduct;
+        }
         return product;
       });
 

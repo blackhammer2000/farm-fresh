@@ -57,7 +57,7 @@ export default {
                 ? (newProduct.name = e.target.value)
                 : null
           "
-          v-bind:value="productToEdit.name"
+          v-bind:value="Object.keys(productToEdit) ? productToEdit.name : ''"
           type="text"
           class="form-control"
           placeholder="Enter Product Name"
@@ -71,7 +71,7 @@ export default {
                 ? (newProduct.price = e.target.value)
                 : null
           "
-          v-bind:value="productToEdit.price"
+          v-bind:value="Object.keys(productToEdit) ? productToEdit.price : ''"
           type="number"
           class="form-control"
           placeholder="Enter Product Price"
@@ -85,7 +85,7 @@ export default {
                 ? (newProduct.stock = e.target.value)
                 : null
           "
-          v-bind:value="productToEdit.stock"
+          v-bind:value="Object.keys(productToEdit) ? productToEdit.stock : ''"
           type="number"
           class="form-control"
           placeholder="Enter Amount In Stock"
@@ -93,7 +93,7 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          @disabled="() => productToEdit.hasOwnProperty"
+          @disabled="() => Object.keys(productToEdit)"
           type="submit"
           class="btn btn-success w-100"
         >
@@ -102,7 +102,7 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          @disabled="() => !productToEdit.hasOwnProperty"
+          @disabled="() => !Object.keys(productToEdit)"
           type="submit"
           class="btn btn-info w-100"
         >

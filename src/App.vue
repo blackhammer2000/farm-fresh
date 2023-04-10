@@ -13,6 +13,7 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
 import HomeView from "./views/HomeView.vue";
+
 // import AboutView from "./views/AboutView.vue";
 // import ServiceView from "./views/ServiceView.vue";
 // import ProductView from "./views/ProductView.vue";

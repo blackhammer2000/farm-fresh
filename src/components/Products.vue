@@ -84,7 +84,7 @@ export default {
               </button>
               <RouterLink
                 @click="() => updateProductToEdit(product)"
-                to="/add/product"
+                to="/modify/product"
                 class="btn bg-info py-2 px-3"
               >
                 <i class="bi bi-eye text-white">Edit</i>

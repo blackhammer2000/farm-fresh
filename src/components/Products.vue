@@ -18,6 +18,8 @@ export default {
     },
 
     updateProductToEdit(productToEdit) {
+      console.log(productToEdit);
+
       this.productToEdit = this.products.find(
         (product) => product.id === productToEdit.id
       );
@@ -61,7 +63,8 @@ export default {
               alt=""
             />
             <h6 class="mb-3">{{ product.name }}</h6>
-            <h5 class="text-primary mb-0">{{ product.price }}</h5>
+            <h5 class="text-primary mb-0">KES: {{ product.price }}</h5>
+            <h5 class="text-primary mb-0">In-Stock:{{ product.stock }}</h5>
             <div class="btn-action d-flex justify-content-center">
               <button
                 @click="() => deleteProduct(product.id)"

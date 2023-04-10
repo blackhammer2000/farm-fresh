@@ -15,7 +15,9 @@ export default {
     };
   },
   methods: {
-    updateProduct(newProduct) {
+    updateProduct(e, newProduct) {
+      e.preventDefault();
+
       this.products = this.products.map((product) => {
         if (product.id === newProduct.id) return newProduct;
         return product;
@@ -38,9 +40,8 @@ export default {
       action=""
       class="form container"
       @submit="
-        () => {
-          e.preventDefault();
-          updateProduct(newProduct);
+        (e) => {
+          updateProduct(e, newProduct);
         }
       "
     >

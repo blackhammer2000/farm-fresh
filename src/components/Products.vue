@@ -1,5 +1,6 @@
 <script>
 import { useProductsStore } from "../stores/products";
+import Productcard from "../components/Productcard.vue";
 
 export default {
   setup() {
@@ -76,6 +77,7 @@ export default {
             </div>
           </div>
         </div> -->
+
         <div class="pb-5">
           <div
             class="product-item position-relative bg-white d-flex flex-column text-center"

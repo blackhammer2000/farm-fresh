@@ -10,12 +10,10 @@ export default {
   data() {
     return {
       products: useProductsStore().products,
+      productToEdit: useProductsStore().productToEdit,
     };
   },
   methods: {
-    deleteProduct(id) {
-      this.products = this.products.filter((product) => product.id !== id);
-    },
     updateProduct(newProduct) {
       this.products = this.products.map((product) => {
         if (product.id === newProduct.id) return newProduct;

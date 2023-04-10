@@ -16,11 +16,11 @@ export default {
     deleteProduct(id) {
       this.products = this.products.filter((product) => product.id !== id);
     },
-    updateProduct(newProduct) {
-      this.products = this.products.map((product) => {
-        if (product.id === newProduct.id) return newProduct;
-        return product;
-      });
+
+    updateProductToEdit(productToEdit) {
+      this.productToEdit = this.products.find(
+        (product) => product.id === productToEdit.id
+      );
     },
   },
   components: { RouterLink },
@@ -69,7 +69,11 @@ export default {
               >
                 <i class="bi bi-cart text-white"> Delete</i>
               </button>
-              <RouterLink to="/add/product" class="btn bg-secondary py-2 px-3">
+              <RouterLink
+                @click="() => updateProductToEdit(product)"
+                to="/add/product"
+                class="btn bg-secondary py-2 px-3"
+              >
                 <i class="bi bi-eye text-white">Edit</i>
               </RouterLink>
             </div>

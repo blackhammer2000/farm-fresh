@@ -5,6 +5,7 @@ import "./assets/lib/owlcarousel/assets/owl.carousel.min.css";
 import "./assets/lib/counterup/counterup.min.js";
 import "lib/waypoints/waypoints.min.js";
 import "lib/easing/easing.min.js";
+import "./assets/js/main.js";
 
 // {/* <script src="lib/easing/easing.min.js"></script>
 //     <script src="lib/waypoints/waypoints.min.js"></script>

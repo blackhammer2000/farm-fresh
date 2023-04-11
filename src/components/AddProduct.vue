@@ -11,9 +11,7 @@ export default {
     return {
       products: useProductsStore().products,
       productToEdit: useProductsStore().productToEdit,
-      name: "",
-      price: "",
-      stock: "",
+      newProduct: {},
     };
   },
   methods: {
@@ -71,6 +69,7 @@ export default {
         <input
           :onChange="(e) => setProp(name, e)"
           :value="productToEdit ? productToEdit.name : ''"
+          v-model="newProduct.name"
           type="text"
           class="form-control"
           placeholder="Enter Product Name"
@@ -80,6 +79,7 @@ export default {
         <input
           :onChange="(e) => setProp(price, e)"
           :value="productToEdit ? productToEdit.price : ''"
+          v-model="newProduct.price"
           type="number"
           class="form-control"
           placeholder="Enter Product Price"
@@ -89,6 +89,7 @@ export default {
         <input
           :onChange="(e) => setProp(stock, e)"
           :value="productToEdit ? productToEdit.stock : ''"
+          v-model="newProduct.stock"
           type="number"
           class="form-control"
           placeholder="Enter Amount In Stock"
@@ -96,7 +97,8 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          :onClick="(e) => addProduct(e, { name, price, stock })"
+          :onClick="(e) => addProduct(e, newProduct)"
+          :disabled="productToEdit"
           type="submit"
           class="btn btn-primary w-100"
         >
@@ -105,7 +107,7 @@ export default {
       </div>
       <div class="form-group mt-2 text-center w-100">
         <button
-          :onClick="(e) => updateProduct(e, { name, price, stock })"
+          :onClick="(e) => updateProduct(e, newProduct)"
           :disabled="!productToEdit"
           type="submit"
           class="btn btn-primary w-100"

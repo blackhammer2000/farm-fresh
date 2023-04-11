@@ -43,13 +43,11 @@ export default {
         <div class="col-lg-8 text-center text-lg-start">
           <h1 class="display-1 text-white mb-md-4">Our Products</h1>
           <RouterLink to="/home">
-            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3"
-              >Home</a
-            ></RouterLink
+            <a class="btn btn-primary py-md-3 px-md-5 me-3">Home</a></RouterLink
           >
 
-          <RouterLink to="/products">
-            <a href="" class="btn btn-secondary py-md-3 px-md-5">Products</a>
+          <RouterLink to="/modify/product">
+            <a class="btn btn-secondary py-md-3 px-md-5">Modify Products</a>
           </RouterLink>
         </div>
       </div>

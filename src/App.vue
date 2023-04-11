@@ -20,17 +20,13 @@ import HomeView from "./views/HomeView.vue";
 </script>
 
 <template>
-  <main
-    class="container-fluid d-flex flex-column align-iyems-center justify-content-start"
-  >
-    <Header />
+  <Header />
 
-    <RouterView @route="HomeView"></RouterView>
+  <RouterView @route="HomeView"></RouterView>
 
-    <!-- <RouterView @route="AboutView"></RouterView>
+  <!-- <RouterView @route="AboutView"></RouterView>
     <RouterView @route="ServiceView"></RouterView>
     <RouterView @route="ProductView"></RouterView> -->
 
-    <Footer />
-  </main>
+  <Footer />
 </template>

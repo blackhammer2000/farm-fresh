@@ -18,7 +18,7 @@ export const useProductsStore = defineStore("PRODUCTS", {
         { id: 12, name: "Mangoes", price: 90, stock: 900 },
       ],
 
-      productToEdit: {},
+      productToEdit: false,
     };
   },
 });

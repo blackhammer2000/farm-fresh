@@ -42,7 +42,18 @@ export default {
       <div class="row justify-content-start">
         <div class="col-lg-8 text-center text-lg-start">
           <h1 class="display-1 text-white mb-md-4">Our Products</h1>
-          <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
+          <RouterLink to="/home">
+            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3"
+              >Home</a
+            ></RouterLink
+          >
+
+          <RouterLink to="/products">
+            <a href="" class="btn btn-secondary py-md-3 px-md-5">Products</a>
+
+            ></RouterLink
+          >
+
           <a href="" class="btn btn-secondary py-md-3 px-md-5">Products</a>
         </div>
       </div>
@@ -74,7 +85,7 @@ export default {
             />
             <h6 class="mb-3">{{ product.name }}</h6>
             <h5 class="text-primary mb-0">KES: {{ product.price }}</h5>
-            <h5 class="text-primary mb-0">In-Stock:{{ product.stock }}</h5>
+            <h5 class="text-primary mb-0">In-Stock: {{ product.stock }}</h5>
             <div class="btn-action d-flex justify-content-center">
               <button
                 @click="() => deleteProduct(product.id)"

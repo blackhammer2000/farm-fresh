@@ -50,11 +50,7 @@ export default {
 
           <RouterLink to="/products">
             <a href="" class="btn btn-secondary py-md-3 px-md-5">Products</a>
-
-            ></RouterLink
-          >
-
-          <a href="" class="btn btn-secondary py-md-3 px-md-5">Products</a>
+          </RouterLink>
         </div>
       </div>
     </div>

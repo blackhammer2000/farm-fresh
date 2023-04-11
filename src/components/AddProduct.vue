@@ -68,7 +68,6 @@ export default {
       <div class="form-group">
         <input
           :onChange="(e) => setProp(name, e)"
-          :value="productToEdit ? productToEdit.name : ''"
           v-model="newProduct.name"
           type="text"
           class="form-control"
@@ -78,7 +77,6 @@ export default {
       <div class="form-group mt-2">
         <input
           :onChange="(e) => setProp(price, e)"
-          :value="productToEdit ? productToEdit.price : ''"
           v-model="newProduct.price"
           type="number"
           class="form-control"
@@ -88,7 +86,6 @@ export default {
       <div class="form-group mt-2">
         <input
           :onChange="(e) => setProp(stock, e)"
-          :value="productToEdit ? productToEdit.stock : ''"
           v-model="newProduct.stock"
           type="number"
           class="form-control"

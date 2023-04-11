@@ -23,7 +23,7 @@ export default {
       e.preventDefault();
 
       if (!newProduct) return;
-      newProduct.id = parseInt(newProduct.length - 1);
+      newProduct.id = this.products.length + 1;
 
       this.products.push(newProduct);
 
@@ -67,7 +67,6 @@ export default {
     <form action="" class="form container">
       <div class="form-group">
         <input
-          :onChange="(e) => setProp(name, e)"
           v-model="newProduct.name"
           type="text"
           class="form-control"
@@ -76,7 +75,6 @@ export default {
       </div>
       <div class="form-group mt-2">
         <input
-          :onChange="(e) => setProp(price, e)"
           v-model="newProduct.price"
           type="number"
           class="form-control"
@@ -85,7 +83,6 @@ export default {
       </div>
       <div class="form-group mt-2">
         <input
-          :onChange="(e) => setProp(stock, e)"
           v-model="newProduct.stock"
           type="number"
           class="form-control"
@@ -95,7 +92,6 @@ export default {
       <div class="form-group mt-2 text-center w-100">
         <button
           :onClick="(e) => addProduct(e, newProduct)"
-          :disabled="productToEdit"
           type="submit"
           class="btn btn-primary w-100"
         >

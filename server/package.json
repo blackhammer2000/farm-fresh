@@ -1,0 +1,11 @@
+{
+  "name": "farm-fresh-server",
+  "version": "1.0.0",
+  "description": "server for farm fresh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "samuel waweru",
+  "license": "ISC"
+}

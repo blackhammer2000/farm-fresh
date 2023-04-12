@@ -29,8 +29,6 @@ export default {
 
       console.log(this.products);
       this.newProduct = {};
-
-      useRouter("/products");
     },
 
     updateProduct(e, newProduct) {
@@ -50,8 +48,6 @@ export default {
       });
 
       this.newProduct = {};
-
-      useRouter("/products");
     },
   },
   components: { RouterLink },

@@ -10,6 +10,7 @@ export default {
   data() {
     return {
       products: useProductsStore().products,
+      productToEdit: null,
     };
   },
   methods: {
@@ -26,7 +27,7 @@ export default {
     },
 
     mouseOverEffects(e) {
-      e.target.style.transtion = "ease .4s";
+      e.target.style.transition = "ease .4s";
       e.target.style.scale = 1.1;
       e.target.style.borderWidth = "2em";
     },

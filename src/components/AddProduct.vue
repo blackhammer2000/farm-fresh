@@ -1,6 +1,6 @@
 <script>
 import { useProductsStore } from "../stores/products";
-import { RouterLink } from "vue-router";
+import { RouterLink, useRoute, useRouter } from "vue-router";
 
 export default {
   setup() {
@@ -29,6 +29,8 @@ export default {
 
       console.log(this.products);
       this.newProduct = {};
+
+      useRouter("/products");
     },
 
     updateProduct(e, newProduct) {
@@ -48,6 +50,8 @@ export default {
       });
 
       this.newProduct = {};
+
+      useRouter("/products");
     },
   },
   components: { RouterLink },
@@ -92,6 +96,7 @@ export default {
       <div class="form-group mt-2 text-center w-100">
         <button
           :onClick="(e) => addProduct(e, newProduct)"
+          :disabled="!productToEdit"
           type="submit"
           class="btn btn-primary w-100"
         >

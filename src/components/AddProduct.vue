@@ -1,6 +1,6 @@
 <script>
 import { useProductsStore } from "../stores/products";
-import { RouterLink, useRoute, useRouter } from "vue-router";
+import { RouterLink } from "vue-router";
 
 export default {
   setup() {

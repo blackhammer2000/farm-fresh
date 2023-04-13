@@ -92,7 +92,7 @@ export default {
       <div class="form-group mt-2 text-center w-100">
         <button
           :onClick="(e) => addProduct(e, newProduct)"
-          :disabled="!productToEdit"
+          :disabled="productToEdit"
           type="submit"
           class="btn btn-primary w-100"
         >

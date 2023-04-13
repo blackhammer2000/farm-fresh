@@ -15,9 +15,9 @@ export default {
     };
   },
   methods: {
-    setProp(prop, e) {
-      this[prop] = e.target.value;
-    },
+    // setProp(prop, e) {
+    //   this[prop] = e.target.value;
+    // },
 
     addProduct(e, newProduct) {
       e.preventDefault();

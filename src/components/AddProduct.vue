@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       products: useProductsStore().products,
-      productToEdit: useProductsStore().productToEdit,
+      productToEdit: useProductsStore()?.productToEdit,
       newProduct: {},
     };
   },

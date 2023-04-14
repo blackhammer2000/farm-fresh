@@ -9,7 +9,7 @@ export default {
   },
   data() {
     return {
-      products: useProductsStore().products,
+      products: useProductsStore()?.products,
       productToEdit: useProductsStore()?.productToEdit,
       newProduct: {},
     };

@@ -82,9 +82,12 @@ export default {
             <h5 class="text-primary mb-0">KES: {{ product.price }}</h5>
             <h5 class="text-primary mb-0">In-Stock: {{ product.stock }}</h5>
             <div class="btn-action d-flex justify-content-center">
+              <button class="btn bg-success py-2 px-3">
+                <i class="bi bi-cart text-white"> Buy</i>
+              </button>
               <button
                 @click="() => deleteProduct(product.id)"
-                class="btn bg-danger py-2 px-3"
+                class="btn bg-danger py-2 px-3 mx-2"
               >
                 <i class="bi bi-cart text-white"> Delete</i>
               </button>

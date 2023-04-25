@@ -9,11 +9,11 @@ const ProductSchema = new Schema({
     type: Number,
     required: true,
   },
-  date_registered: {
-    type: String,
+  stock: {
+    type: Number,
     required: true,
   },
-  password: {
+  date_registered: {
     type: String,
     required: true,
   },

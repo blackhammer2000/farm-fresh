@@ -23,9 +23,28 @@ export default {
       e.preventDefault();
 
       if (!newProduct) return;
-      newProduct.id = this.products.length + 1;
 
-      this.products.push(newProduct);
+      (async function () {
+        const requestConfigs = {
+          method: "post",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            product: newProduct,
+          }),
+        };
+        const res = await fetch(
+          "http://localhost:8082/api/farmfresh/create/product",
+          requestConfigs
+        );
+        const data = await res.json();
+
+        this.products = data.products;
+      })();
+
+      // this.products.push(newProduct);
 
       console.log(this.products);
       this.newProduct = {};

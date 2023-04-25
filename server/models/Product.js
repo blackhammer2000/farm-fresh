@@ -6,7 +6,7 @@ const ProductSchema = new Schema({
     required: true,
   },
   price: {
-    type: String,
+    type: Number,
     required: true,
   },
   date_registered: {
@@ -14,7 +14,7 @@ const ProductSchema = new Schema({
     required: true,
   },
   password: {
-    type: Object,
+    type: String,
     required: true,
   },
 });

@@ -39,9 +39,9 @@ export default {
           "http://localhost:8082/api/farmfresh/create/product",
           requestConfigs
         );
-        const data = await res.json();
+        const { product } = await res.json();
 
-        this.products = data.products;
+        this.products.push(product);
       })();
 
       // this.products.push(newProduct);

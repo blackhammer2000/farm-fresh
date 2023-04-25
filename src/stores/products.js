@@ -4,12 +4,13 @@ export const useProductsStore = defineStore("PRODUCTS", {
   state: () => {
     (async function () {
       const res = await fetch(
-        "http://localhost:8082/api/farmfresh/read/products"
+        "http://localhost:8082/api/farmfresh/read/products",
+        { mode: "no-cors" }
       );
-      const data = await res.json();
+      const { products } = await res.json();
 
       return {
-        products: data.products,
+        products: products,
         productToEdit: true,
       };
     })();

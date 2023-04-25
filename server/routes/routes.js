@@ -27,18 +27,13 @@ router.post("/api/farmfresh/user/login", async (req, res) => {
 
     if (!user) throw new Error("Incorrect Email or Password.");
 
-    const { _id, subscription } = user;
-
-    const isSubscriptionExpired = checkSubscriptionExpiry(subscription);
-
-    if (isSubscriptionExpired && typeof isSubscriptionExpired === "object")
-      throw new Error(isSubscriptionExpired?.error);
+    const { _id } = user;
 
     const passwordMatch = await compare(encryptedPassword, user?.password);
 
     if (!passwordMatch) throw new Error("Incorrect Email or Password.");
 
-    const userData = { _id, subscription, user: true };
+    const userData = { _id, user: true };
 
     const generatedToken = await signAccessToken(userData);
 
@@ -74,6 +69,7 @@ router.post("/api/farmfresh/create/product", async (req, res) => {
     res.status(201).json({
       messsage: "product added successfully",
       response_status: "success",
+      newProduct: createNewProduct,
     });
   } catch (err) {
     if (err.message)
@@ -119,6 +115,7 @@ router.patch("/api/farmfresh/update/product", async (req, res) => {
     res.status(201).json({
       messsage: "product updated successfully",
       response_status: "success",
+      products: updateProduct,
     });
   } catch (err) {
     if (err.message)
@@ -147,6 +144,7 @@ router.delete("/api/farmfresh/delete/product", async (req, res) => {
     res.status(201).json({
       messsage: "product deleted successfully",
       response_status: "success",
+      products: deleteProduct,
     });
   } catch (err) {
     if (err.message)

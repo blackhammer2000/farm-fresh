@@ -9,7 +9,7 @@ const {
   verifyAccessToken,
 } = require("../middlewares/tokens/jwt_auth");
 
-router.post("/api/institutions/user/login", async (req, res) => {
+router.post("/api/farmfresh/user/login", async (req, res) => {
   try {
     if (!req?.body?.email || !req?.body?.password)
       throw new Error("Provide all the necessary credentials");
@@ -48,4 +48,16 @@ router.post("/api/institutions/user/login", async (req, res) => {
     if (err?.message)
       res.status(500).json({ error: err?.message, response_status: "danger" });
   }
+});
+
+router.post("/api/farmfresh/create/product", async (req, res) => {
+  try {
+    if (!req.body.product) throw new Error("missing product to add");
+
+    const {
+      body: { product },
+    } = req;
+
+    const isProductRegistered = await product.findOne({ name: product.name });
+  } catch (err) {}
 });

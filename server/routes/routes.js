@@ -61,6 +61,8 @@ router.post("/api/farmfresh/create/product", async (req, res) => {
     if (isProductRegistered)
       throw new Error("Product has already been registered.");
 
+    product.date_registered = new Date().toDateString();
+
     const createNewProduct = await Product.create(product);
 
     if (!createNewProduct)

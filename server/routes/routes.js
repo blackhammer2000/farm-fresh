@@ -7,7 +7,7 @@ const {
 const {
   signAccessToken,
   verifyAccessToken,
-} = require("../middlewares/tokens/jwt_auth");
+} = require("../middleware/tokens/tokens");
 
 const { User } = require("../models/Product");
 const { Product } = require("../models/Product");

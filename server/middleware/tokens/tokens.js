@@ -1,4 +1,4 @@
-const jwt = require("jsonwebtoken");
+const { sign, verify } = require("jsonwebtoken");
 
 require("dotenv").config();
 
@@ -10,7 +10,7 @@ const verifyAccessToken = (req, res, next) => {
       headers: { token },
     } = req;
 
-    const { _id, subscription, user, admin } = jwt.verify(
+    const { _id, subscription, user, admin } = verify(
       token,
       process.env.MY_SECRET_KEY
     );
@@ -48,4 +48,19 @@ const verifyAccessToken = (req, res, next) => {
   }
 };
 
-module.exports = { verifyAccessToken };
+const signAccessToken = (userData) => {
+  return new Promise((resolve, reject) => {
+    const token = sign(userData, process.env.MY_SECRET_KEY, {
+      expiresIn: "15min",
+      issuer: "textbookmanager inc.",
+      audience: `${userData}`,
+    });
+
+    if (!token) reject(token);
+    resolve(token);
+  });
+};
+
+module.exports = signAccessToken;
+
+module.exports = { signAccessToken, verifyAccessToken };

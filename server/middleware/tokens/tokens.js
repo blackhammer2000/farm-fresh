@@ -57,6 +57,7 @@ const signAccessToken = (userData) => {
     });
 
     if (!token) reject(token);
+
     resolve(token);
   });
 };

@@ -15,15 +15,53 @@ export default {
   },
   methods: {
     deleteProduct(id) {
-      this.products = this.products.filter((product) => product.id !== id);
+      (async function () {
+        const requestConfigs = {
+          method: "delete",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            productID: id,
+          }),
+        };
+        const res = await fetch(
+          "http://localhost:8082/api/farmfresh/delete/product",
+          requestConfigs
+        );
+        const data = await res.json();
+
+        this.products = data.products;
+      })();
     },
 
     updateProductToEdit(productToEdit) {
       console.log(productToEdit);
 
-      this.productToEdit = this.products.find(
-        (product) => product.id === productToEdit.id
-      );
+      (async function () {
+        const requestConfigs = {
+          method: "patch",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            product: productToEdit,
+          }),
+        };
+        const res = await fetch(
+          "http://localhost:8082/api/farmfresh/update/product",
+          requestConfigs
+        );
+        const data = await res.json();
+
+        this.products = data.products;
+      })();
+
+      // this.productToEdit = this.products.find(
+      //   (product) => product.id === productToEdit.id
+      // );
     },
 
     mouseOverEffects(e) {

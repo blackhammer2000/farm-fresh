@@ -39,13 +39,33 @@ export default {
         return;
       }
 
-      this.products = this.products.map((product) => {
-        if (product.id === this.productToEdit.id) {
-          newProduct.id = product?.id;
-          return newProduct;
-        }
-        return product;
-      });
+      (async function () {
+        const requestConfigs = {
+          method: "patch",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            product: newProduct,
+          }),
+        };
+        const res = await fetch(
+          "http://localhost:8082/api/farmfresh/update/product",
+          requestConfigs
+        );
+        const data = await res.json();
+
+        this.products = data.products;
+      })();
+
+      // this.products = this.products.map((product) => {
+      //   if (product.id === this.productToEdit.id) {
+      //     newProduct.id = product?.id;
+      //     return newProduct;
+      //   }
+      //   return product;
+      // });
 
       this.newProduct = {};
     },

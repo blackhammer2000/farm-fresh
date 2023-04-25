@@ -10,29 +10,15 @@ const verifyAccessToken = (req, res, next) => {
       headers: { token },
     } = req;
 
-    const { _id, subscription, user, admin } = verify(
-      token,
-      process.env.MY_SECRET_KEY
-    );
+    const { _id, user } = verify(token, process.env.MY_SECRET_KEY);
 
-    if (!_id || (!subscription && user)) throw new Error("Please Log in again");
+    if (!_id) throw new Error("Please Log in again");
 
-    if (!admin && !user) throw new Error("Unauthorized action, unknown role.");
-
-    const isSubscriptionExpired = user
-      ? checkSubscriptionExpiry(subscription)
-      : null;
-
-    if (
-      user &&
-      isSubscriptionExpired &&
-      typeof isSubscriptionExpired === "object"
-    )
-      throw new Error(isSubscriptionExpired?.error);
+    if (!user) throw new Error("Unauthorized action, unknown role.");
 
     req.body.id = _id;
 
-    user ? (req.body.user = user) : admin ? (req.body.admin = admin) : null;
+    user ? (req.body.user = user) : null;
 
     delete req.headers.token;
 

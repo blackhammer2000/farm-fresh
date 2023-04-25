@@ -122,3 +122,31 @@ router.patch("/api/farmfresh/update/product", async (req, res) => {
       res.status(500).json({ error: err.message, response_status: "danger" });
   }
 });
+
+router.delete("/api/farmfresh/delete/product", async (req, res) => {
+  try {
+    if (!req.body.productID) throw new Error("missing product to update");
+
+    const {
+      body: { productID },
+    } = req;
+
+    const isProductRegistered = await Product.findOne({ _id: productID });
+
+    if (!isProductRegistered)
+      throw new Error("Product has not been registered.");
+
+    const deleteProduct = await Product.findOneAndDelete({ _id: productID });
+
+    if (!deleteProduct)
+      throw new Error("Error when updating the product to the database.");
+
+    res.status(201).json({
+      messsage: "product deleted successfully",
+      response_status: "success",
+    });
+  } catch (err) {
+    if (err.message)
+      res.status(500).json({ error: err.message, response_status: "danger" });
+  }
+});

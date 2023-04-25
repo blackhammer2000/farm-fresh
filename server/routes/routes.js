@@ -9,6 +9,9 @@ const {
   verifyAccessToken,
 } = require("../middlewares/tokens/jwt_auth");
 
+const { User } = require("../models/Product");
+const { Product } = require("../models/Product");
+
 router.post("/api/farmfresh/user/login", async (req, res) => {
   try {
     if (!req?.body?.email || !req?.body?.password)

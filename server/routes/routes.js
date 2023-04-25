@@ -58,6 +58,67 @@ router.post("/api/farmfresh/create/product", async (req, res) => {
       body: { product },
     } = req;
 
-    const isProductRegistered = await product.findOne({ name: product.name });
-  } catch (err) {}
+    const isProductRegistered = await Product.findOne({ name: product.name });
+
+    if (isProductRegistered)
+      throw new Error("Product has already been registered.");
+
+    const createNewProduct = await Product.create(product);
+
+    if (!createNewProduct)
+      throw new Error("Error when adding the product to the database.");
+
+    res.status(201).json({
+      messsage: "product added successfully",
+      response_status: "success",
+    });
+  } catch (err) {
+    if (err.message)
+      res.status(500).json({ error: err.message, response_status: "danger" });
+  }
+});
+
+router.get("/api/farmfresh/read/products", async (req, res) => {
+  try {
+    const allProducts = await Product.find();
+
+    if (!allProducts) throw new Error("No product in your database.");
+
+    res.status(200).json({ products: allProducts, response_status: "success" });
+  } catch (err) {
+    if (err.message) {
+      res.status(500).json({ error: err.message, response_status: "danger" });
+    }
+  }
+});
+
+router.patch("/api/farmfresh/update/product", async (req, res) => {
+  try {
+    if (!req.body.product) throw new Error("missing product to update");
+
+    const {
+      body: { product },
+    } = req;
+
+    const isProductRegistered = await Product.findOne({ name: product.name });
+
+    if (!isProductRegistered)
+      throw new Error("Product has not been registered.");
+
+    const updateProduct = await Product.findOneAndUpdate(
+      { name: product.name },
+      { $set: product }
+    );
+
+    if (!updateProduct)
+      throw new Error("Error when updating the product to the database.");
+
+    res.status(201).json({
+      messsage: "product updated successfully",
+      response_status: "success",
+    });
+  } catch (err) {
+    if (err.message)
+      res.status(500).json({ error: err.message, response_status: "danger" });
+  }
 });

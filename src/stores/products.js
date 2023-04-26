@@ -1,9 +1,10 @@
 import { defineStore } from "pinia";
+import { get } from "axios";
 
 export const useProductsStore = defineStore("PRODUCTS", {
   state: () => {
     (async function () {
-      const res = await fetch(
+      const res = await get(
         "http://localhost:8082/api/farmfresh/read/products",
         { mode: "no-cors" }
       );

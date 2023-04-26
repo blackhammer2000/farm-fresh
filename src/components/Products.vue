@@ -106,6 +106,7 @@ export default {
         <div
           class="pb-5 border my-2"
           :on-mouseover="(e) => mouseOverEffects(e)"
+          v-if="products"
           v-for="product in products"
         >
           <div

@@ -1,6 +1,7 @@
 <script>
 import { useProductsStore } from "../stores/products";
 import { RouterLink } from "vue-router";
+import { post, patch } from "axios";
 
 export default {
   setup() {
@@ -26,7 +27,6 @@ export default {
 
       (async function () {
         const requestConfigs = {
-          method: "post",
           mode: "no-cors",
           headers: {
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default {
             product: newProduct,
           }),
         };
-        const res = await fetch(
+        const res = await post(
           "http://localhost:8082/api/farmfresh/create/product",
           requestConfigs
         );
@@ -60,7 +60,6 @@ export default {
 
       (async function () {
         const requestConfigs = {
-          method: "patch",
           mode: "no-cors",
           headers: {
             "Content-Type": "application/json",
@@ -69,7 +68,7 @@ export default {
             product: newProduct,
           }),
         };
-        const res = await fetch(
+        const res = await patch(
           "http://localhost:8082/api/farmfresh/update/product",
           requestConfigs
         );

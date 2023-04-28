@@ -56,9 +56,9 @@ export default {
           "http://localhost:8082/api/farmfresh/update/product",
           requestConfigs
         );
-        const data = await res.json();
+        const {products} = await res.json();
 
-        this.products = data.products;
+        this.products = products;
       })();
 
       // this.productToEdit = this.products.find(

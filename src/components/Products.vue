@@ -1,7 +1,7 @@
 <script>
 import { useProductsStore } from "../stores/products";
 import { RouterLink } from "vue-router";
-import { axios as ax } from "axios";
+import axios from "axios";
 
 export default {
   setup() {
@@ -27,9 +27,10 @@ export default {
           }),
         };
 
-        const res =
-          await delete ("http://localhost:8082/api/farmfresh/delete/product",
-          requestConfigs);
+        const res = await axios.delete(
+          "http://localhost:8082/api/farmfresh/delete/product",
+          requestConfigs
+        );
         const { products } = await res.json();
 
         this.products = products;

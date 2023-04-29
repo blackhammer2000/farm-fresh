@@ -50,7 +50,8 @@ export default {
             product: productToEdit,
           }),
         };
-        const res = await patch(
+
+        const res = await axios.patch(
           "http://localhost:8082/api/farmfresh/update/product",
           requestConfigs
         );

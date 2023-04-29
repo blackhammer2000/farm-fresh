@@ -1,7 +1,7 @@
 <script>
 import { useProductsStore } from "../stores/products";
 import { RouterLink } from "vue-router";
-import {delete, patch} from "axios";
+import { axios as ax } from "axios";
 
 export default {
   setup() {
@@ -18,7 +18,6 @@ export default {
     deleteProduct(id) {
       (async function () {
         const requestConfigs = {
-          method: "delete",
           mode: "no-cors",
           headers: {
             "Content-Type": "application/json",
@@ -28,11 +27,10 @@ export default {
           }),
         };
 
-        const res = await delete(
-          "http://localhost:8082/api/farmfresh/delete/product",
-          requestConfigs
-        );
-        const {products} = await res.json();
+        const res =
+          await delete ("http://localhost:8082/api/farmfresh/delete/product",
+          requestConfigs);
+        const { products } = await res.json();
 
         this.products = products;
       })();
@@ -55,7 +53,7 @@ export default {
           "http://localhost:8082/api/farmfresh/update/product",
           requestConfigs
         );
-        const {products} = await res.json();
+        const { products } = await res.json();
 
         this.products = products;
       })();
